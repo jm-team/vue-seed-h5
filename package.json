@@ -15,7 +15,6 @@
     "vee-validate": "^2.0.0-beta.22",
     "vue": "^2.1.10",
     "vue-axios": "^1.2.2",
-    "vue-resource": "^1.2.0",
     "vue-router": "^2.2.0",
     "vuex": "^2.1.2"
   },

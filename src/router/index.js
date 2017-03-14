@@ -29,7 +29,7 @@ export default new Router({
   routes: [
       {
     path: '/',
-    query: {code:''},
+    query: {code:'111'},
     name: 'gongXiu',
     component: home
   }, {

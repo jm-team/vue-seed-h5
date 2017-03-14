@@ -52,7 +52,7 @@
     <!--end of gx-summary-->
     <div class="latest-notice">
       <h6 class="notice-header bottom-border-1px">最新公告</h6>
-      <ul v-show="notices.length>0">
+      <ul v-show="notices.length > 0">
         <li class="bottom-border-1px" v-for="notice in notices">
           <a class="notice-item" v-bind:href="notice.contentUrl">
             <!--<img v-bind:src="notice.picPath | imgCdn" alt="">-->
@@ -73,7 +73,7 @@
           </div>
         </li>-->
       </ul>
-      <div class="no-data" v-show="notices.length === 0" style="padding-left:1.5rem">暂无数据!</div>      
+      <div class="no-data" v-show="notices.length == 0" style="padding-left:1.5rem">暂无数据!</div>      
     </div>
   </div>
 </template>
@@ -85,9 +85,9 @@
     data() {
       return {
         loading: false,
-        activities: null,
-        notices: null,
-        error: null
+        activities: [],
+        notices: [],
+        error: []
         ,wxCode: this.$route.query.code
         ,userInfo:'test'
       }
