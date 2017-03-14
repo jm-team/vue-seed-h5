@@ -32,7 +32,7 @@ export default {
   methods: {
     routeChange () {
       let path = this.$route.path
-      if (path === '/home' || path === '/fs' || path === '/foshi' || path === '/me') {
+      if (path === '/' || path === '/fs' || path === '/foshi' || path === '/me') {
         this.showNav = true
         this.pageBottom='50px'
       } else {

@@ -3,7 +3,6 @@ import Router from 'vue-router'
 
 // 引入路由视图
 
-import wxAccredit from 'views/wxAccredit'
 import home from 'views/gx'
 import gxBaomin from 'views/gxBaomin'
 import gxBaoshu from 'views/gxBaoshu'
@@ -30,11 +29,6 @@ export default new Router({
   routes: [
       {
     path: '/',
-    name: 'wxAccredit',
-    component: wxAccredit
-  },
-      {
-    path: '/home',
     query: {code:''},
     name: 'gongXiu',
     component: home

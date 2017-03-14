@@ -8,7 +8,7 @@ module.exports = {
 
     // api服务器
     // API_ADDRESS: "http://121.43.178.117:8080",
-    API_ADDRESS: "http://172.18.3.21:8083",
+    API_ADDRESS: "http://121.43.178.117:8080",
 
     // 中台服务器
     CENTER_ADDRESS: "http://192.168.26.251:8889",

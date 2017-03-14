@@ -1,10 +1,6 @@
 <template>
   <div>
     <top-swiper></top-swiper>
-    <!--end of mt-swipe-->
-    <!--{{ wxCode }}-->
-    <!--{{ userInfo }}-->
-    <!--{{ new Date() | dateTransform}}-->
     <div class="primary-item-links-container bottom-border-5px">
       <ul class="primary-item-links clear">
         <li>
@@ -106,37 +102,6 @@
       var root=this.$parent
       this.fetchActivities()
       this.fetchNotices()
-      console.dir(this)
-
-        if (localStorage.wxCode && localStorage.wxCode==this.wxCode){
-          return
-        }
-        if (typeof this.wxCode != 'undefined'){
-            root.wxCode=this.wxCode
-            localStorage.wxCode=this.wxCode
-          this.axios.get('/wx/call',{
-              params:{
-                  code:this.wxCode
-                  ,state:'123' // 这个参数没用，随便设置的
-              }
-          }).then((res) => {
-              this.userInfo=res.data
-              if (res.data.errCode){
-                  this.$router.push({name:'wxAccredit'})
-                  return
-              }
-              root.userInfo=res.data
-              localStorage.userInfo=JSON.stringify(res.data)
-          }).catch((err) => {
-              this.$toast('获取微信用户信息失败！')
-              if (err.response){
-                  console.dir(err.response)
-              }else{
-                  console.log('Error:'+err.message)
-              }
-              console.log(err.config)
-          })
-        }
     },
     filters: {
       // http://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
@@ -179,149 +144,158 @@
   }
 
 </script>
-<style lang="scss" rel="stylesheet/scss">
-  // varibles
-  $primary-link-item-size: 4.534rem !default;
-  $primary-link-item-font-size: 1.2rem !default;
-  $block-row-bottom-border-5px: .5rem solid #f7f7f8 !default;
-  $block-row-bottom-border-1px: .1rem solid #f7f7f8 !default;
-  $section-header-color: #000 !default;
-  //
-  .bottom-border-5px {
-    border-bottom: $block-row-bottom-border-5px;
-  }
-  
-  .bottom-border-1px {
-    border-bottom: $block-row-bottom-border-1px;
-  }
-  
-  .primary-item-links-container {
-    padding-top: 2rem;
-    padding-bottom: 1.2rem;
-  }
-  
-  .primary-item-links {
-    padding-left: 0;
-    color: $section-header-color;
-    li {
-      float: left;
-      width: 25%;
-      list-style: none;
-      text-align: center;
-      font-size: $primary-link-item-font-size;
-      a {
-        color: $section-header-color;
-      }
-    }
-    p {
-      margin: .8rem 0;
-    }
-  }
-  
-  .gx-gxbm {
+<style>
+.bottom-border-5px {
+  border-bottom: 0.5rem solid #f7f7f8;
+}
+
+.bottom-border-1px {
+  border-bottom: 0.1rem solid #f7f7f8;
+}
+
+.primary-item-links-container {
+  padding-top: 2rem;
+  padding-bottom: 1.2rem;
+}
+
+.primary-item-links {
+  padding-left: 0;
+  color: #000;
+}
+
+.primary-item-links li {
+    float: left;
+    width: 25%;
+    list-style: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.primary-item-links li a {
+      color: #000;
+}
+
+.primary-item-links p {
+    margin: .8rem 0;
+}
+
+.gx-gxbm {
+  display: block;
+  height: 4.534rem;
+  background: url(../assets/img/icon-nav-baomin.png) no-repeat center;
+  background-size: auto 4.534rem;
+}
+
+.gx-mrbs {
+  display: block;
+  height: 4.534rem;
+  background: url(../assets/img/icon-nav-baoshu.png) no-repeat center;
+  background-size: auto 4.534rem;
+}
+
+.gx-gdhx {
+  display: block;
+  height: 4.534rem;
+  background: url(../assets/img/icon-nav-huixiang.png) no-repeat center;
+  background-size: auto 4.534rem;
+}
+
+.gx-gkcx {
+  display: block;
+  height: 4.534rem;
+  background: url(../assets/img/icon-nav-gongke.png) no-repeat center;
+  background-size: auto 4.534rem;
+}
+
+.gx-summary {
+  background: url(../assets/img/home-bg.jpg) repeat-y;
+  background-size: 100% auto;
+}
+
+.gx-summary h3 {
+    margin-top: 0;
+    margin-bottom: .9rem;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.gx-summary li {
+    width: 50%;
+}
+
+.gx-summary .item {
+    padding: 2rem 1.6rem;
+}
+
+.gx-summary .label {
+    margin-top: 0;
+    margin-bottom: .9rem;
+    font-size: .9rem;
+    color: #838383;
+}
+
+.gx-summary .number {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    color: #fc951d;
+}
+
+.gx-summary .item-cell-left {
+    width: 18rem;
+}
+
+.gx-summary .item-cell-right {
+    width: 10.8rem;
+    padding-left: 3.5rem;
+}
+
+.latest-notice {
+  margin-bottom: 54px;
+}
+
+.latest-notice .notice-header {
+    padding-left: 1.6rem;
+    line-height: 3.2rem;
+    margin-bottom: 0;
+}
+
+.latest-notice .notice-item {
     display: block;
-    height: $primary-link-item-size;
-    background: url(../assets/img/icon-nav-baomin.png) no-repeat center;
-    background-size: auto $primary-link-item-size;
-  }
-  
-  .gx-mrbs {
-    display: block;
-    height: $primary-link-item-size;
-    background: url(../assets/img/icon-nav-baoshu.png) no-repeat center;
-    background-size: auto $primary-link-item-size;
-  }
-  
-  .gx-gdhx {
-    display: block;
-    height: $primary-link-item-size;
-    background: url(../assets/img/icon-nav-huixiang.png) no-repeat center;
-    background-size: auto $primary-link-item-size;
-  }
-  
-  .gx-gkcx {
-    display: block;
-    height: $primary-link-item-size;
-    background: url(../assets/img/icon-nav-gongke.png) no-repeat center;
-    background-size: auto $primary-link-item-size;
-  }
-  
-  .gx-summary {
-    background: url(../assets/img/home-bg.jpg) repeat-y;
-    background-size: 100% auto;
-    h3 {
-      margin-top: 0;
-      margin-bottom: .9rem;
-      font-size: 1.8rem;
-      color: $section-header-color;
-    }
-    li {
-      width: 50%;
-    }
-    .item {
-      padding: 2rem 1.6rem;
-    }
-    .label {
-      margin-top: 0;
-      margin-bottom: .9rem;
-      font-size: .9rem;
-      color: #838383;
-    }
-    .number {
-      margin-top: 0;
-      margin-bottom: 0;
-      font-size: 1.2rem;
-      color: #fc951d;
-    }
-    .item-cell-left {
-      width: 18rem;
-    }
-    .item-cell-right {
-      width: 10.8rem;
-      padding-left: 3.5rem;
-    }
-  }
-  
-  .latest-notice {
-    margin-bottom: 54px;
-    .notice-header {
-      padding-left: 1.6rem;
-      line-height: 3.2rem;
-      margin-bottom: 0;
-    }
-    .notice-item {
-      display: block;
-      padding: 1.4rem 1.6rem;
-      position: relative;
-    }
-    .notice-intro {
-      padding-left: 10rem;
-    }
-    li:last-child {
-      border-bottom: 0;
-    }
-    h6 {
-      margin: .2rem 0 1rem;
-      font-size: 1.2rem;
-      color: $section-header-color;
-    }
-    img {
-      position: absolute;
-      left: 1.6rem;
-      top: 1.4rem;
-      width: 8.3rem;
-      height: 6.2rem;
-    }
-    p {
-      line-height: 1.6rem;
-      max-height: 3.2rem;
-      font-size: .9rem;
-      color: #838383;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-line-clamp: 2;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-    }
-  }
+    padding: 1.4rem 1.6rem;
+    position: relative;
+}
+
+.latest-notice .notice-intro {
+    padding-left: 10rem;
+}
+
+.latest-notice li:last-child {
+    border-bottom: 0;
+}
+
+.latest-notice h6 {
+    margin: .2rem 0 1rem;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.latest-notice img {
+    position: absolute;
+    left: 1.6rem;
+    top: 1.4rem;
+    width: 8.3rem;
+    height: 6.2rem;
+}
+
+.latest-notice p {
+    line-height: 1.6rem;
+    max-height: 3.2rem;
+    font-size: .9rem;
+    color: #838383;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+}
 </style>

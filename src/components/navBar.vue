@@ -1,7 +1,7 @@
 <template>
     <mt-tabbar v-model="curMenu" v-show="showNav">
-      <mt-tab-item id="gx" :class="{'is-selected': route === '/home'}">
-        <router-link to="/home" class="nav-gx">共修</router-link>
+      <mt-tab-item id="gx" :class="{'is-selected': route === '/'}">
+        <router-link to="/" class="nav-gx">共修</router-link>
       </mt-tab-item>
       <mt-tab-item id="fs" :class="{'is-selected': route === '/fs'}">
         <router-link to="/fs" class="nav-fs">放生</router-link>

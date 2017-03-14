@@ -166,62 +166,53 @@
     }
   }
 </script>
-<style lang="scss" rel="stylesheet/scss">
-  $block-row-bottom-border-5px: .5rem solid #f7f7f8 !default;
-  .gx-huixiang-header {
-    line-height: 4.8rem;
-    padding-left: 5.7rem;
-    background: url(../assets/img/gx-huixiang-header-bg.png) no-repeat 1.5rem center;
-    background-size: 3.2rem auto;
-    background-color: #f7f7f8;
-    font-size: 1.2rem;
-  }
-  
-  .gx-huixiang-main-content {
-    padding: 0 1.5rem;
-    border-bottom: $block-row-bottom-border-5px;
-  }
-  
-  .gx-huixiang-personal-note {
-    padding: 0 1.5rem;
-    position: relative;
-  }
-  
-  .gx-huixiang-personal-note header {
-    font-size: 1.2rem;
-    line-height: 4.2rem;
-  }
-  
-  .gx-huixiang-personal-note .mint-cell-wrapper {
-    padding: 0;
-  }
-  
-  .gx-huixiang-personal-note .mint-field.is-textarea .mint-cell-value {
-    padding-left: 0;
-    padding-right: 0;
-    font-size: 1.2rem;
-  }
-  
-  .remian-input-length {
-    /*position: absolute;
-    bottom: 0;
-    left: 1.5rem;*/
-    margin: .6rem 0;
-    font-size: .9rem;
-  }
-  
-  .gx-huixiang-btn-submit {
-    display: block;
-    margin: 1.5rem auto 4.3rem;
-    width: 13.8rem;
-    height: 3.8rem;
-    border: .2rem solid #fdaa4a;
-    border-radius: .2rem;
-    color: #fdaa4a;
-    font-size: 1.2rem;
-  }
-  
-  .mint-field.multiple-input .mint-cell-title {
-    width: 0;
-  }
+<style>
+.gx-huixiang-header {
+  line-height: 4.8rem;
+  padding-left: 5.7rem;
+  background: url(../assets/img/gx-huixiang-header-bg.png) no-repeat 1.5rem center;
+  background-size: 3.2rem auto;
+  background-color: #f7f7f8;
+  font-size: 1.2rem;
+}
+.gx-huixiang-main-content {
+  padding: 0 1.5rem;
+  border-bottom: 0.5rem solid #f7f7f8;
+}
+.gx-huixiang-personal-note {
+  padding: 0 1.5rem;
+  position: relative;
+}
+.gx-huixiang-personal-note header {
+  font-size: 1.2rem;
+  line-height: 4.2rem;
+}
+.gx-huixiang-personal-note .mint-cell-wrapper {
+  padding: 0;
+}
+.gx-huixiang-personal-note .mint-field.is-textarea .mint-cell-value {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 1.2rem;
+}
+.remian-input-length {
+  /*position: absolute;
+  bottom: 0;
+  left: 1.5rem;*/
+  margin: .6rem 0;
+  font-size: .9rem;
+}
+.gx-huixiang-btn-submit {
+  display: block;
+  margin: 1.5rem auto 4.3rem;
+  width: 13.8rem;
+  height: 3.8rem;
+  border: .2rem solid #fdaa4a;
+  border-radius: .2rem;
+  color: #fdaa4a;
+  font-size: 1.2rem;
+}
+.mint-field.multiple-input .mint-cell-title {
+  width: 0;
+}
 </style>
