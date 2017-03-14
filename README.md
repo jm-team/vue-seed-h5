@@ -1,21 +1,17 @@
-# zfxf-h5
+# vue-seed
 
-> weixin h5 site
+> vue2项目基础脚手架
 
 ## Build Setup
 
 ``` bash
-# install dependencies
-npm install
+# 安装vueseed
+npm i -g vue-seed
 
-# serve with hot reload at localhost:8080
+# 初始化脚手架
+vue-seed -i vuedemo
+
+# 进入脚手架目录，启动脚手架
+cd vuedemo
 npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
