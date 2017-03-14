@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <title>增慧学佛</title>
+    <script>
+        // 计算rem，适配页面
+        !(function(win,doc){
+            function setHtmlFontSize(){
+                var w_height=doc.documentElement.clientHeight,
+                    w_width=doc.documentElement.clientWidth;
+                if (w_width>1080){
+                    w_width=1080;
+                    doc.documentElement.style.width="1080px";
+                }
+
+                var uiWidth=320;
+                var html_fontSize=w_width*(10/uiWidth);
+                document.documentElement.style.fontSize=html_fontSize+'px';
+            }
+
+            var ua=navigator.userAgent;
+            var isUC=ua.indexOf('UCBrowser')>-1 ? true : false;
+            if (isUC){
+                doc.addEventListener('DOMContentLoaded',setHtmlFontSize,false);
+            }else{
+                setHtmlFontSize();
+            }
+            window.onload=function(){
+              win.addEventListener('resize',setHtmlFontSize,false);
+
+            }
+
+        })(window,document);
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

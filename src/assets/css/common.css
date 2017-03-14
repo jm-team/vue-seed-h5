@@ -1,0 +1,193 @@
+@charset "utf-8";
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html{font-family:Arial,Verdana,Sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+html,body{margin:0;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+a{background-color:transparent}
+a:active,a:hover{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:700}
+dfn{font-style:italic}
+h1{font-size:2em;margin:.67em 0}
+mark{background:#ff0;color:#000}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:1em 40px}
+hr{box-sizing:content-box;height:0}
+pre{overflow:auto}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+input{line-height:normal}
+input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}
+input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+textarea{overflow:auto}
+optgroup{font-weight:700}
+table{border-collapse:collapse;border-spacing:0}
+td,th{padding:0}
+
+/* reset add transparent*/
+input,textarea,button,a,img{ -webkit-tap-highlight-color:rgba(255,255,255,0.3);}
+ul,li{ list-style:none; margin:0; padding:0;}
+a{ text-decoration:none;}
+input,select,textarea{-webkit-box-sizing:border-box;box-sizing:border-box;}
+html{font-size:62.5%;}
+
+/*Global*/
+.clear{ height: 1%;}
+.clear:after { content: ""; display:block; height:0; clear:both; visibility:hidden;}
+.hide{ display: none;}
+/*强制换行*/
+.break{word-wrap:break-word; word-break:break-all;}
+/*截断超出容器的文字并显示省略号*/
+.cut{overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+/*垂直翻转*/
+.rotate180{-webkit-transform:rotate(180deg); transform:rotate(180deg);}
+
+#app {
+  margin-bottom: 54px;
+}
+
+.mint-tabbar {
+  position: fixed;
+}
+
+.fn-left {
+  float: left;
+}
+
+.fn-right {
+  float: right;
+}
+
+/* 放生，佛事 tab导航菜单样式 */
+.tab-wrap{
+  overflow-x: scroll;
+  position:fixed;
+  top:0;
+  width:100%;
+  background-image: linear-gradient(180deg, #f5f5f5, #f5f5f5 50%, transparent 50%);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.mint-navbar{
+  display:block;
+  width:1000px;
+  background:none;
+}
+.mint-navbar .mint-tab-item{
+  color:#000;
+  white-space: nowrap;
+  width:100px;
+  display:inline-block;
+}
+.mint-tab-item-label{
+  font-size:1.1rem;
+}
+.mint-navbar .mint-tab-item.is-selected{
+  color:#fc951d;
+  margin-bottom:0;
+  border-bottom:2px solid #fc951d;
+}
+
+/* 功课查询、我的共修改页面共用布局样式 */
+.layoutTmp1 .top-banner > img{
+  width:100%;height:auto;display:block;
+}
+.layoutTmp1 .main-title{
+  line-height:4.2rem;
+  background:#eee;
+  font-size:1.237rem;
+  padding-left:1rem;
+  color:#000;
+}
+.layoutTmp1 .sub-title{
+  line-height:4.3rem;
+  color:#000;
+  font-size:1.237rem;
+  padding-left:1rem;
+  background-image: linear-gradient(180deg, #e7e7e7, #e7e7e7 50%, transparent 50%);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.layoutTmp1 .cell-list {
+  padding: 0 1rem;
+}
+.layoutTmp1 .cell-list .cell-item{
+  background-image: linear-gradient(180deg, #e7e7e7, #e7e7e7 50%, transparent 50%);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.layoutTmp1 .cell-list .cell-item a{
+  display: block;
+  font-size:1.237rem;
+  color:#000;
+  line-height:150%;
+  background:url('../img/arrow-right.png') no-repeat right center;
+  background-size:13px auto;
+  padding: 0.6rem 0;
+  padding-right: 1rem;
+}
+.layoutTmp1 .cell-list .cell-item p{
+  margin:0;
+  padding-bottom:1rem;
+  font-size:0.928rem;
+  color:#838383;
+}
+.layoutTmp1 .cell-list .cell-item p cite{
+  float:right;
+  font-style: normal;
+}
+.layoutTmp1 .cell-list .cell-item p cite > span{
+  color:#fc951d;
+}
+/* = list样式 */
+.listTmp1 .list-title{
+  padding: 1.2rem 1rem;
+  line-height: 150%;
+  font-size:1.237rem;
+  background:#eee;
+  color:#000;
+}
+.listTmp1 .list-box{
+  padding:0 1rem;
+}
+.listTmp1 .list-box ul li{
+  position:relative;
+  line-height:3.8rem;
+  border-bottom:1px solid #eee;
+  font-size:1.237rem;
+  color:#555;
+  padding-right:18%;
+}
+.listTmp1 .list-box ul li > span{
+  position:absolute;
+  right:0.5rem;
+  color:#fc951d;
+}
+.mint-msgbox{
+  box-shadow: 1px 1px 18px rgba(0,0,0,.5);
+}
+.no-data{
+  padding:1rem;
+  color:#666;
+  font-size:1.2rem;
+}
