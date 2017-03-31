@@ -21,6 +21,7 @@ import meHuixiang from 'views/meHuixiang'
 import meProfile from 'views/meProfile'
 
 import page404 from 'views/page404'
+import searchPage from 'views/searchPage'
 
 Vue.use(Router)
 
@@ -112,7 +113,11 @@ export default new Router({
     path: '/me/profile',
     name: 'meProfile',
     component: meProfile
-  }, {
+  },{
+          path: '/search',
+          name: 'search',
+          component: searchPage
+      }, {
     path: '*',
     component: page404
   }]

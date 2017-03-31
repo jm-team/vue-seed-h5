@@ -23,6 +23,7 @@ var proxyTable = config.dev.proxyTable
 var app = express()
 
 var appData = require('../src/mock/data.json')
+
 var events = appData.events
 var notices = appData.notices
 var registerList = appData.registerList
@@ -86,6 +87,7 @@ app.use(hotMiddleware)
 // serve pure static assets
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
+app.use('/mock', express.static('./src/mock'))
 
 var uri = 'http://localhost:' + port
 

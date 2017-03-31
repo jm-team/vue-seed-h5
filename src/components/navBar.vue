@@ -9,6 +9,9 @@
       <mt-tab-item id="foshi" :class="{'is-selected': route === '/foshi'}">
         <router-link to="/foshi" class="nav-foshi">佛事</router-link>
       </mt-tab-item>
+      <mt-tab-item id="search" :class="{'is-selected': route === '/search'}" class="nav-gx">
+         <router-link :to="{name: 'search', query:{categoryIds: '', industryIds: ''}}">搜索</router-link>
+      </mt-tab-item>
       <mt-tab-item id="me" :class="{'is-selected': route === '/me'}">
         <router-link to="/me" class="nav-me">我的</router-link>
       </mt-tab-item>
