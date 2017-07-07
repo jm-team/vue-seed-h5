@@ -1,17 +1,16 @@
-# vue-seed
+# vue-seed-h5
 
-> vue2项目基础脚手架
+> 移动端vue2项目基础脚手架
 
 ## Build Setup
 
 ``` bash
-# 安装vueseed
-npm i -g vue-seed
+# 安装node依赖包
+npm i
 
-# 初始化脚手架
-vue-seed -i vuedemo
-
-# 进入脚手架目录，启动脚手架
-cd vuedemo
+# 启动开发环境
 npm run dev
+
+# 构建生产代码
+npm run build
 ```
